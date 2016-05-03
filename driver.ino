@@ -1,27 +1,30 @@
 #include <Servo.h>
 #include "buildProject.h"
 
-Servo leftWheel, rightWheel;
-Servo flagServo;
-
 void moveForward() {
-	
-}
-
-void moveBackward() {
-
+	digitalWrite(LEFT,HIGH);
+	digitalWrite(RIGHT,HIGH);
 }
 
 void turnLeft() {
-
+	digitalWrite(RIGHT,HIGH);
 }
 
 void turnRight() {
-
+  digitalWrite(LEFT,HIGH);
 }
 
 void waveFlag() {
+	digitalWrite(FLAG,HIGH);
+}
 
+void stopFlag() {
+	digitalWrite(FLAG,LOW);
+}
+
+void stop() {
+	digitalWrite(LEFT,LOW);
+	digitalWrite(RIGHT,LOW);
 }
 
 void setup() {
