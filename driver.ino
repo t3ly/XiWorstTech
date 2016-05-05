@@ -6,28 +6,37 @@
 void moveForward() {
 	digitalWrite(LEFT,HIGH);
 	digitalWrite(RIGHT,HIGH);
+	//analogWrite(LEFT,255);
+	//analogWrite(RIGHT,255);
 }
 
 void turnLeft() {
 	digitalWrite(RIGHT,HIGH);
+	//analogWrite(RIGHT,255);
 }
 
 void turnRight() {
   digitalWrite(LEFT,HIGH);
+	//analogWrite(LEFT,255);
 }
 
 //Flag waving will have one speed but we can vary it to match robot speed.
 void waveFlag() {
 	digitalWrite(FLAG,HIGH);
+	//analogWrite(FLAG, 255);
 }
 
 void stopFlag() {
 	digitalWrite(FLAG,LOW);
+	//analogWrite(FLAG, 0);
 }
 
 void stop() {
 	digitalWrite(LEFT,LOW);
 	digitalWrite(RIGHT,LOW);
+	//If we decide to switch to analog
+	//analogWrite(LEFT, 0);
+	//analogWrite(RIGHT, 0);
 }
 
 void setup() {
