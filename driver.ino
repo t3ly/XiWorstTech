@@ -70,6 +70,12 @@ void loop() {
 			case MOVE_STOP:
 				stop();
 				break;
+			case FLAG_START:
+				waveFlag();
+				break;
+			case FLAG_STOP;
+				stopFlag();
+				break;
 		}
 	}
 }
